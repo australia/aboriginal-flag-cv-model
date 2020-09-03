@@ -1,0 +1,26 @@
+<annotation>
+	<folder>imagesclassified</folder>
+	<filename>35.jpg</filename>
+	<path>/home/ajax/repos/australia/aboriginal-flag-cv-model/imagesclassified/35.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>385</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>aboriginal_flag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>117</xmin>
+			<ymin>117</ymin>
+			<xmax>283</xmax>
+			<ymax>271</ymax>
+		</bndbox>
+	</object>
+</annotation>
