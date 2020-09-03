@@ -30,7 +30,6 @@ print(labels, boxes, scores)
 # All this code does is draw rectangles around the model predictions above
 # and outputs to the display for your viewing pleasure.
 for idx, s in enumerate(scores):
-    print(idx, s)
     if s > 0.1: # This line decides what probabilities we should outline
         rect = boxes[idx]
         start_point = (rect[0].int(), rect[1].int())
