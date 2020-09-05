@@ -51,7 +51,7 @@ Let's do it!
 
 git clone https://github.com/australia/aboriginal-flag-cv-model
 cd aboriginal-flag-cv-model
-pip3 install requirements.txt 
+pip3 install -r requirements.txt 
 ```
 
 ### Classification
