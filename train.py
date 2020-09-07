@@ -24,7 +24,7 @@ model.fit(dataset, epochs=3, verbose=True)
 # TIP: The more images you classify and the more epochs you run, the better your results will be.
 
 # Once the model training has finished, we can save to a single file.
-# Passs this file around to anywhere you want to now use your newly trained model.
+# Pass this file around to anywhere you want to now use your newly trained model.
 model.save('model.pth')
 
 # If you have got this far, you've already trained your very own unique machine learning model
