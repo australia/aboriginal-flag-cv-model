@@ -12,7 +12,7 @@ Over the years I've been trying to learn machine learning but never got anywhere
 
 My main idea was that if I could use machine learning to train a computer vision model to find Aboriginal flags. I could then run it over historical archives of images/paintings to see if I can find any other places the Aboriginal flag seemingly appeared throughout history. Such that in a court case one might overturn the copyright by simply saying they were printing an "Indonesian symbol from the 14th century" (just a potential example)
 
-![asdas](https://i.imgur.com/9BuOp46.jpg)
+![asdas](https://i.imgur.com/nJwFE7K.jpg)
 
 If you look at the top left of the image, you will see an Aboriginal flag in this painting. I considered my model training a success once it could find the flag in this sample
 
