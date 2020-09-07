@@ -124,6 +124,8 @@ What really makes this whole tutorial so easy is the fact we will be using a pyt
 
 The entire code to go from `dataset`(folder of images and XML) to `reusable object recognition model` is below.
 
+WARNING: You might need a decent computer to even run 3 epochs let alone 6 so if you just want to get a copy of a decently trained model, just download my [pre-trained model.pth](https://drive.google.com/file/d/1WrL1lV85njUwLR_pYaDD7fh1TV0lFKEN/view?usp=sharing)
+
 ```python
 # train.py
 
@@ -133,6 +135,7 @@ from detecto import core
 from detecto.core import Model
 
 # Load all images and XML files from the Classification section
+# or point it at "images" if you classified your own
 dataset = core.Dataset('images_classified/')
 
 # We initalize the Model and map it to the label we used in labelImg classification
@@ -144,7 +147,7 @@ model = Model(['aboriginal_flag'])
 # you will probably have to rent a bigger box for a few hours to get this to run on.
 # Epochs essentially means iterations, the more the merrier (accuracy) (up to a limit)
 # It will take quite a while for this process to end, grab a wine.
-model.fit(dataset, epochs=10, verbose=True)
+model.fit(dataset, epochs=6, verbose=True)
 
 # TIP: The more images you classify and the more epochs you run, the better your results will be.
 
@@ -236,13 +239,15 @@ If something didn't work feel free to complain in the tutorial repo [issues](htt
 
 ### Conclusion
 
-I do hope it worked, those steps above worked for me. I drew an Aboriginal flag on paper and took selfies at many algorithms and the model picked it up. (I manually classified 150 images instead of 40 though) (and if I call recall correctly, around 20 epochs)
+I do hope it worked, those steps above worked for me. I drew an Aboriginal flag on paper and took selfies at many angles and the model picked it up. (I manually classified 150 images instead of 40 though) (and if I call recall correctly, around 10 epochs)
 
-<insert selfie with paper flag here>
+![ajax davis](https://i.imgur.com/Xcg422N.png)
+
+
 
 This tutorial is meant to be a complete noob guide (written by a noob), how I've described things and the way they are in computer vision - are two different things.
 
-Though this task has allowed me to introduce myself to the computer vision sector and I'm sure I will learn more over time.
+This task has allowed me to introduce myself to the computer vision sector and I'm sure I will learn more over time.
 
 The difficulty of trying to identify objects differs by magnitudes depending on what you are trying to achieve.
 
