@@ -1,6 +1,6 @@
 # An Open Source Computer vision model to identify the Australian Aboriginal Flag
 
-> This project was based on a [Hacker News discussion](https://news.ycombinator.com/item?id=24187794), thank you for all your input! 
+> This project was based on a [Hacker News discussion](https://news.ycombinator.com/item?id=24187794), thank you for all your input!
 
 I've been recently paying attention to the [#freetheflag](https://clothingthegap.com.au/pages/free-the-flag) debate, in short;
 
@@ -28,7 +28,7 @@ I've also saved some of the resulting data in a [table](https://airtable.com/shr
 
 I will keep working on the project to improve the results, and all of the code is open-source and free to use.
 
-The rest of this post is for people who would like to run the code themselves and learn how to train an object recognition model from scratch. It is less than 20 lines of code in total and I've made everything as simple as possible with all resources available in the repo. 
+The rest of this post is for people who would like to run the code themselves and learn how to train an object recognition model from scratch. It is less than 20 lines of code in total and I've made everything as simple as possible with all resources available in the repo.
 
 If anyone would like to help me train a better model then please [reach out](mailto:thomasalwyndavis@gmail.com)!
 
@@ -59,7 +59,7 @@ Let's do it!
 
 git clone https://github.com/australia/aboriginal-flag-cv-model
 cd aboriginal-flag-cv-model
-pip3 install -r requirements.txt 
+pip3 install -r requirements.txt
 ```
 
 ### Classification
@@ -148,8 +148,8 @@ model = Model(['aboriginal_flag'])
 # It will take up quite a lot of resources, and if it crashes on your computer
 # you will probably have to rent a bigger box for a few hours to get this to run on.
 # Epochs essentially means iterations, the more the merrier (accuracy) (up to a limit)
-# It will take quite a while for this process to end, grab a wine.
-model.fit(dataset, epochs=6, verbose=True)
+# It will take quite a while (15 mins?) for this process to end, grab a wine.
+model.fit(dataset, epochs=3, verbose=True)
 
 # TIP: The more images you classify and the more epochs you run, the better your results will be.
 
