@@ -34,7 +34,7 @@ for idx, s in enumerate(scores):
         rect = boxes[idx]
         start_point = (rect[0].int(), rect[1].int())
         end_point = (rect[2].int(), rect[3].int())
-        cv2.rectangle(image, start_point, end_point, (0, 0, 255), 2)
+        cv2.rectangle(image, start_point, end_point, (0, 255, 0), 5)
 
 cv2.imshow("Image" + str(idx), image)
 # Press a key to close the output image

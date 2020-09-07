@@ -258,3 +258,5 @@ The difficulty of trying to identify objects differs by magnitudes depending on 
 Again, all feedback is welcome on the [repo](https://github.com/australia/aboriginal-flag-cv-model) or just [contact me](mailto:thomasalwyndavis@gmail.com).
 
 p.s. do not invent Skynet
+
+Thanks to [Andred Burchill](https://www.linkedin.com/in/andrew-burchill-9a42956) for testing.
