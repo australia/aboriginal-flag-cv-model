@@ -149,6 +149,7 @@ model = Model(['aboriginal_flag'])
 # you will probably have to rent a bigger box for a few hours to get this to run on.
 # Epochs essentially means iterations, the more the merrier (accuracy) (up to a limit)
 # It will take quite a while (15 mins?) for this process to end, grab a wine.
+# If you get process killed, this process is memory bound. Try increase your disk swap ram.
 model.fit(dataset, epochs=3, verbose=True)
 
 # TIP: The more images you classify and the more epochs you run, the better your results will be.
@@ -159,6 +160,7 @@ model.save('model.pth')
 
 # If you have got this far, you've already trained your very own unique machine learning model
 # What are you going to do with this new found power?
+
 
 ```
 
