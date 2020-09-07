@@ -1,40 +1,46 @@
 # An Open Source Computer vision model to identify the Australian Aboriginal Flag
 
+> This project was based off a [Hacker News discussion](https://news.ycombinator.com/item?id=24187794), thank you for all your input! 
+
 I've been recently paying attention to the [#freetheflag](https://clothingthegap.com.au/pages/free-the-flag) debate, in short;
 
 > The Aboriginal flag [of Australia](https://www.legislation.gov.au/Details/F2008L00209) is widely used by indigenous Australians as a symbol of their heritage. Though, the flag is actually copyrighted by an [indigenous individual](https://aiatsis.gov.au/explore/articles/aboriginal-flag#:~:text=Flag%20copyright,the%20author%20of%20the%20flag.&text=The%20copyright%20license%20for%20the,to%20Carroll%20and%20Richardson%20Flags.) who has exclusive control of the licensing rightfully. This has become a debate because a lot of Aboriginals believe they should have a right to print or copy the Aboriginal flag as they would like.
 
-Over the years I've been trying to learn machine learning but never got anywhere because I couldn't think of a use case. I recently read a cool resource from [Clothing The Gap](https://clothingthegap.com.au/pages/aboriginal-flag-timeline), which explains the current copyright debate on a timeline. They had an image that contains the Aboriginal flag done by a European artist several years earlier and how this could maybe be used to invalidate copy right as the design was perhaps already in existence. This gave me the idea to think about if there was perhaps other artworks throughout history that may have contained the flag design.
+Over the years I've been trying to learn machine learning but never got anywhere because I couldn't think of a use case. I recently read a cool post from [Clothing The Gap](https://clothingthegap.com.au/pages/aboriginal-flag-timeline) which gives an overview of the current copyright debate on a timeline. They had an image that contains the Aboriginal flag done by a European artist several years earlier and how this could maybe be used to invalidate copy right as the design was perhaps already in existence. This gave me the idea to think about if there were perhaps other artworks throughout history that may have contained the flag design.
 
-So my main idea was that if I could use machine learning to train a model and then run it over historical archives of images/paintings to see if I can find any other places the Aboriginal flag seemingly appeared throughout history.
+My main idea was that if I could use machine learning to train a computer vision model to find Aboriginal flags. I could then run it over historical archives of images/paintings to see if I can find any other places the Aboriginal flag seemingly appeared throughout history. Such that in a court case one might over turn the copy right by simply saying they were printing an "Indonesian symbol from the 14th century" (just a potential example)
 
 ![asdas](https://i.imgur.com/9BuOp46.jpg)
 
-If you look in the top left of the image, you will see an Aboriginal flag in this painting. I considered my model a success once it could find the flag in this sample
+If you look in the top left of the image, you will see an Aboriginal flag in this painting. I considered my model training a success once it could find the flag in this sample
 
 It does actually work and as you can see in the above image, the model is able to draw a bounding box around the "flag".
 
 I've only scanned 100,000 historical images so far and yet to find any pre-existing artworks that contain the flag. I still have a couple million images to get through and hope to add a couple million more.
 
-But here is a gallery of false positives, images that the model thought were aboriginal flags but not quite... (if you look at the image for long enough you can see why maybe the model thought it was an aboriginal flag)
+But here is a gallery of false positives, images that the model thought were aboriginal flags but not quite... (if you look at the images for long enough you can see why maybe the model thought it was an aboriginal flag)
 
 [Results](https://imgur.com/a/Q22VnGK)
 
-I will keep working on it to improve the results, all of the code is open source and free to use.
+I've also saved some of the resulting data in a [table](https://airtable.com/shrHq7PG7CF7axGB4) for anyone who wants to take a closer look.
 
-The rest of this post is for people who would like to run the code themselves and learn how to train an object recognition model. It is less than 20 lines of code in total and I've made everything as simple as possible with all resources available in the repo. 
+I will keep working on the project to improve the results, and all of the code is open source and free to use.
 
-You need to know a bit of programming, not much, just a junior level of understanding. Knowing a little Python would be great but it is also an easy language to understand.
+The rest of this post is for people who would like to run the code themselves and learn how to train an object recognition model from scratch. It is less than 20 lines of code in total and I've made everything as simple as possible with all resources available in the repo. 
 
 If anyone would like to help me train a better model then please [reach out](mailto:thomasalwyndavis@gmail.com)!
 
 ## Technical
 
-I had no idea how I might train a model to do this, and managed to do it in a week, it is super easy for anyone with a bit of programming knowledge. But the CV community is big and beautiful so after wrestling with Tensorflow (Don't recommend for beginners) I got my idea working with PyTorch in a night.
+I had no prior experience in computer vision, so I had no idea how I might train a model to do this. I managed to do it in a week, it is super easy for anyone with a bit of programming knowledge. The CV community is big and beautiful and I managed to get my idea working with PyTorch in a night. (I spent a few nights on Tensorflow and didn't get very far)
 
-This tutorial is self contained and can be found in the [repo](https://github.com/australia/aboriginal-flag-cv-model). It is only around 20 lines of code so don't be intimidated. I also had a problem with the complexity of the language in the CV community so I'm going to purposely over simplify things here.
+This tutorial is self contained and can be found in the [repo](https://github.com/australia/aboriginal-flag-cv-model).
 
-This is super easy and you could likely have it working in an hour or two. (Then add ML to your [resume](https://jsonresume.org))
+Again, the tutorial contains very little code thanks to a few open source projects it depends on.
+
+I also had a problem with the complexity of the language in the CV community so I'm going to purposely over simplify things here.
+
+This is super easy and you could likely have it working in under an hour. (Then add ML to your [resume](https://jsonresume.org))
 
 We are going to split the tutorial into three steps;
 

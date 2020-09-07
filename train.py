@@ -17,7 +17,7 @@ model = Model(['aboriginal_flag'])
 # you will probably have to rent a bigger box for a few hours to get this to run on.
 # Epochs essentially means iterations, the more the merrier (accuracy) (up to a limit)
 # It will take quite a while for this process to end, grab a wine.
-model.fit(dataset, epochs=10, verbose=True)
+model.fit(dataset, epochs=1, verbose=True)
 
 # TIP: The more images you classify and the more epochs you run, the better your results will be.
 
