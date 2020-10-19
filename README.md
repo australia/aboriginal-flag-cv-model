@@ -62,6 +62,8 @@ cd aboriginal-flag-cv-model
 pip3 install -r requirements.txt
 ```
 
+> **_NOTE:_**  If you are running on Ubuntu LTS 20.04, and you get an error message similar to `ImportError: libavcodec.so.57: cannot open shared object file: No such file or directory`, try installing `opencv-contrib-python` - see [issue #3](https://github.com/australia/aboriginal-flag-cv-model/issues/3) for more.
+
 ### Classification
 
 For the purposes of this tutorial, we are just going to train a model to find Aboriginal flags. But after you've finished this, you should be able to train a model to detect any object you would like. (Simple things, not hard things like if a person is *sad*).
